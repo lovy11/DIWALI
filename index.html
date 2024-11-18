@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwali</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(90deg,white,#AABD12);
+            overflow: hidden;          
+        }        
+        .circle{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 350px;
+            height: 350px;
+            background: #AABD12;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.1);
+        }
+        .circle:before{
+            content:'' ;
+            position: absolute;
+            width: 100%;
+            height:100%;
+            padding: 0px;
+            top: -6px;
+            left: -7px;
+            border: 8px dotted white;
+            border-radius: 50%;
+            transform: scale(1.0);
+            animation: rotate 30s linear infinite;
+        }
+        .light{
+            position: absolute;
+            bottom: 10px;
+            left: 62%;
+            transform: translatex(0%);
+            width: 190px;
+            height: 90px;
+            background: brown;
+            border-bottom-left-radius: 120px;
+            border-bottom-right-radius: 120px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border: 5px solid #fff;
+            box-shadow: 0px 0px 25px rgba(0, g0, 0, .5);
+        }
+        .light:before{
+            content: '';
+            position: absolute;
+            top: -80px;
+            left: 75px;
+            width: 30px;
+            height: 70px;
+            background: rgb(255, 230, 0);
+            border-radius:0px 110px 20px ;
+            transform-origin:  right;
+            filter: blur(2px);
+            animation: animate 5s linear infinite;
+        }
+        @keyframes animate{
+            0%{transform: rotate(30deg); box-shadow: 0 0 30px #fff;}
+            25%{transform: rotate(20deg);}
+            50%{transform: rotate(15deg);}
+            75%{transform: rotate(30deg);}
+            100%{transform: rotate(35deg);}
+        }
+        @keyframes rotate{
+            0%{transform: scale(1.1) rotate(0deg);}
+            100%{transform: scale(1.1) rotate(360deg);}
+        }
+        h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 40px 0 0;
+            padding: 0;
+            text-align: center;
+            color: #fff;
+            font-size: 50px;
+            line-height: 60px;
+            text-shadow: 0px 15px 5px rgba(0, 0, 0, 0.4);
+            animation: sec 2s infinite;
+        }
+        h1 span{font-size: 70px; font-family:  Georgia, 'Times New Roman', Times, serif; animation: sec 2s infinite;}
+        @keyframes sec{
+            0%{color: coral;}
+            10%{color: white;}
+            20%{color: red; letter-spacing: 3px;}
+            40%{color: gold;}
+            60%{color: maroon; letter-spacing: 8px;}
+            100%{color: #AABD12;}
+            
+        }
+        p{
+            color: rgba(233, 233, 43, 0.781);
+            width: 150px;
+            text-align: center;
+            text-transform: capitalize;
+            position: relative;
+            left: 40px;
+            top: 30px;
+            text-shadow: 2px 2px 20px  red;
+            word-spacing: 5px;
+        }
+        .logo img{
+           width: 20%;
+           margin: 20px 20px 0px;
+        }
+        h2{
+            display: flex;
+            justify-content: center;   
+            font-size: 5vw;
+        }
+        h2 span{
+           animation: animate 3s linear infinite;
+           animation-delay: calc(0.1s * var(--i));
+        }
+        @keyframes animate{
+            0%{
+                color: #fff;
+                filter:  hue-rotate(40deg);
+                text-shadow: 0 0 10px #00b3ff,
+                0 0 20px #00ff40,
+                0 0 40px #00b3ff,
+                0 0 80px #00b3ff,
+                0 0 100px #00b3ff,
+                0 0 120px #6f00ff,
+                0 0 200px #00b3ff,
+                0 0 300px #00b3ff,
+                0 0 400px #00b3ff;
+            }
+            
+            30%, 70%{
+                color: #fff;
+                filter: blur(1px) hue-rotate(360deg);
+                text-shadow: 0 0 10px #00b3ff,
+                0 0 20px #00b3ff,
+                0 0 40px #00b3ff,
+                0 0 80px #00b3ff,
+                0 0 100px #00b3ff,
+                0 0 120px #00b3ff,
+                0 0 200px #00b3ff,
+                0 0 300px #00b3ff,
+                0 0 400px #00b3ff;
+            }
+            100%{
+                color: transparent;
+                box-shadow: none;
+                filter: blur(2px) hue-rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>
+        <span style="--i:1;">H</span>
+        <span style="--i:2;">a</span>
+        <span style="--i:3;">p</span>
+        <span style="--i:4;">p</span>
+        <span style="--i:5;">y</span>
+        <span style="--i:6; margin-left:5vw;">D</span>
+        <span style="--i:7;">i</span>
+        <span style="--i:8;">w</span>
+        <span style="--i:10;">a</span>
+        <span style="--i:11;">l</span>
+        <span style="--i:12;">i</span>
+    </h2>
+    <div class="logo"><img src="the_logo1.webp"></div>
+    <div class="circle">
+        <h1>Happy<br><span>Diwali</span></h1>
+        <p>let the diwali burns all your bad times and enter you in a good times.</p>
+        <div class="light"></div>
+    </div>
+</body>
+</html>
